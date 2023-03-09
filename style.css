@@ -1,0 +1,243 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+ *
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(./Weather/pexels-johannes-plenio-1118873.jpg);
+    background-position: center;
+    background-size: cover;
+    
+
+}
+
+.wrapper{
+    width: 400px;
+    border-radius: 7px;
+    background-color: rgb(222, 235, 235);
+
+}
+
+.wrapper header{
+   color: rgb(15, 188, 188);
+    font-size: 21px;
+    font-weight: 500;
+    padding: 16px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bfbfbf;
+
+}
+header .fa{
+    cursor: pointer;
+    font-size: 0%;
+    margin-right: 6px;
+
+
+}
+.wrapper.active header i{
+    font-size: 17px;
+    margin-left: 5px;
+
+
+}
+.wrapper .input-part {
+    
+    margin: 20px 25px 30px;
+}
+
+
+.wrapper.active .input-part{
+    display: none;
+}
+
+.input-part .info-txt{
+    display: none;
+    font-size:17px;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.info-txt.error{
+    display: block;
+    color:#721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+.info-txt.pending{
+    display: block;
+    color:#0c5460;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+} 
+.input-part :where(input,button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 7px;
+
+}
+.input-part input{
+    text-align: center;
+    border: 1px solid #bfbfbf;
+   
+    
+}
+
+.input-part input:is(:focus, :valid){
+    border: 2px solid #43AFFC;
+
+
+}
+
+.input-part button{
+    color: aliceblue;
+    cursor: pointer;
+    background: #43AFFC;
+}
+.input-part .separator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.separator::before{
+    content: "or";
+    color:#908b8b;
+    font-size: 19px;
+    padding: 0 35px;
+    
+    background: rgb(222, 235, 235);
+       
+}
+.input-part .separator2{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
+.input-part .btte{
+    color: aliceblue;
+    cursor: pointer;
+    background: #43fc4c;
+}
+
+
+/*-----weather -------*/
+.wrapper .weatherpart{
+    margin: 30px 0 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper.active .weatherpart{
+    display: flex;
+}
+
+.weatherpart img{
+    max-width: 125px;
+
+}
+.weatherpart .temp{
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+.weatherpart .temp .numb{
+    font-weight: 600;
+}
+.weatherpart .temp .deg{
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+
+}
+.weatherpart .weather{
+    font-size: 21px;
+    text-align: center;
+    margin: 5px 20px 15px;
+
+}
+.weatherpart .location{
+    
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 30px;
+
+}
+.location i{
+    font-size: 22px;
+    margin-right: 6px ;
+}
+.bottom-details{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #bfbfbf ;
+
+}
+.bottom-details .columfeels{
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+
+}
+.bottom-details .columhumidity{
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: center;
+
+}
+.bottom-details i{
+    color: #43AFFC;
+    font-size: 40px;
+    margin-right: 8px;
+
+}
+.columhumidity{
+    border-left: 1px solid #bfbfbf;
+}
+.details .temp  , .columhumidity span{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: -3px;
+
+}
+.details .temp .deg{
+    margin: 0;
+    font-size: 17px;
+    pad: 0 2px 0 1px;
+
+}
+.details p{
+    font-size: 14px;
+    margin-top: 4px;
+}
+
